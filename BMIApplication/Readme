@@ -1,0 +1,113 @@
+BMI Calculator Application
+
+Overview
+The Person class represents an individual user in the BMI Calculator application. It encapsulates personal details such as name, age, weight, height, BMI, and gender. 
+This class provides methods to get and set these details and a method to return a string representation of the person's information.
+Java Swing application allows users to input their personal information, calculate their Body Mass Index (BMI), and save the data to a list.
+The application also displays an image representing the user's gender and provides a status based on the calculated BMI.
+This Java Swing application allows users to input, calculate, update, and manage their personal information, including Body Mass Index (BMI). 
+Users can add, update, and delete records, view detailed information, and refresh the list of records.
+This Java Swing application manages user information and calculates Body Mass Index (BMI). 
+It provides functionalities for inputting, updating, removing, and displaying user records.
+
+Features
+
+Input Personal Information:
+Name,Age,Weight,Height,BMI,Gender (Male/Female)
+Calculate BMI:
+
+Computes BMI based on weight and height.
+Provides a status update based on the BMI value.
+Save, Update, and Remove Records:
+
+Add new records.
+Update existing records.
+Remove selected records.
+Display User Information:
+
+View all user records.
+Refresh the list of users.
+
+Dynamic Gender Icon:
+Displays an icon representing the selected gender.
+
+Components
+
+btnSaveActionPerformed
+Purpose: Saves the user data into a Person object and adds it to the Users list.
+Inputs:
+name: User's name
+age: User's age (integer)
+weight: User's weight (double)
+height: User's height (double)
+BMI: User's BMI (double)
+gender: Selected gender (Male/Female)
+Actions:
+Creates a new Person object and adds it to the Users list.
+Clears the input fields.
+Displays a success message in the status text field.
+
+btnCalculateBMIActionPerformed
+Purpose: Calculates the BMI based on weight and height and displays the corresponding status.
+Inputs:
+weight: User's weight (double)
+height: User's height (double)
+Actions:
+Calculates BMI using the formula.
+Formats the BMI to two decimal places.
+Updates the status text field with the BMI category.
+Displays the calculated BMI in the BMI text field.
+
+rbmActionPerformed
+Purpose: Updates the gender icon when the "Male" radio button is selected.
+Actions:
+Changes the icon to a male icon if the "Male" radio button is selected; otherwise, it sets the icon to the female icon.
+
+rbfActionPerformed
+Purpose: Updates the gender icon when the "Female" radio button is selected.
+Actions:
+Changes the icon to a female icon if the "Female" radio button is selected; otherwise, it sets the icon to the male icon.
+
+btndActionPerformed
+Purpose: Displays all user records.
+Actions:
+Iterates through the Users list and concatenates each Person object’s string representation.
+Displays the concatenated string in output1.
+
+btndeActionPerformed
+Purpose: Removes the selected user record from the Users list.
+Actions:
+Checks if a selection is made.
+Removes the selected Person object.
+Clears the input fields and updates the status message.
+Calls updatecombo() to refresh the list of user names.
+
+btnuActionPerformed
+Purpose: Updates the selected user record with new data.
+Actions:
+Checks if a selection is made.
+Updates the Person object’s attributes (name, age, weight, height, BMI, gender).
+Formats the BMI to two decimal places.
+Sets the updated Person object back in the Users list.
+Updates the status message and refreshes the user name list using updatecombo().
+
+cbrecordActionPerformed
+Purpose: Placeholder method for actions on record selection. (Currently not implemented.)
+
+btnrefreshActionPerformed
+Purpose: Refreshes the list of user names in the combo box.
+Actions:
+Clears existing items in cbrecord.
+Adds each user’s name from the Users list to the combo box.
+Updates the input fields with the details of the first user if the list is not empty.
+
+ReportActionPerformed
+Purpose: Displays all user records in output1.
+Actions:
+Iterates through the Users list and concatenates each Person object’s string representation.
+Displays the concatenated string in output1.
+
+updatecombo()
+Purpose: Updates the combo box with the current list of user names.
+Actions:
+Clears and repopulates cbrecord with the names of all users in the Users list.
