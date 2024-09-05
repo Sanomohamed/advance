@@ -1,0 +1,65 @@
+Binary File Demo Application
+Overview
+The Binary File Demo is a Java Swing application that allows users to manage personal information such as name, weight, and height. Users can add new records, save them to a binary file, and load previously saved records from the file. The program demonstrates the use of serialization to store and retrieve Person objects in binary format.
+
+Components
+Person Class
+Package: binaryfiledemo
+
+Description:
+
+Represents a person with attributes for name, weight, and height.
+Implements Serializable to support serialization.
+Fields:
+
+private String name: Stores the name of the person.
+private double weight: Stores the weight of the person in kilograms.
+private double height: Stores the height of the person in centimeters.
+Constructor:
+
+public Person(String name, double weight, double height): Initializes a new Person object with the specified name, weight, and height.
+Methods:
+
+Getters and setters for each field.
+public String toString(): Returns a formatted string representation of the person.
+NewJFrame Class
+Package: binaryfiledemo
+
+Description:
+
+Provides a graphical user interface (GUI) for adding, saving, and loading Person records.
+Extends javax.swing.JFrame and contains the necessary Swing components.
+GUI Components:
+
+JTextField txtname: Input field for the person's name.
+JTextField txtweight: Input field for the person's weight.
+JTextField txtheight: Input field for the person's height.
+JTextArea txtoutput: Displays the list of persons.
+JButton btnadd: Button to add a new person record.
+JButton btnsave: Button to save the list of persons to a file.
+JButton btnload: Button to load the list of persons from a file.
+Event Handlers:
+
+btnaddActionPerformed(ActionEvent evt): Adds a new Person to the ArrayList and clears input fields.
+btnsaveActionPerformed(ActionEvent evt): Serializes and saves the ArrayList of Person objects to a file.
+btnloadActionPerformed(ActionEvent evt): Deserializes and loads the ArrayList of Person objects from a file, and displays them.
+Main Method:
+
+public static void main(String[] args): Launches the GUI application.
+Fields:
+
+ArrayList<Person> person: Stores a list of Person objects.
+Usage
+Running the Application:
+
+Run the main method in NewJFrame to start the application. The GUI window will appear.
+Adding a New Person:
+
+Enter the person's name, weight, and height in the respective text fields.
+Click the "Add" button to add the record to the list.
+Saving Records:
+
+Click the "Save" button to serialize and save the list of persons to a file named Person.dat.
+Loading Records:
+
+Click the "Load" button to deserialize and load the list of persons from the Person.dat file and display the records in the text area.
