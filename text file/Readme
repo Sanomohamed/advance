@@ -1,0 +1,49 @@
+Person Record Management System
+This Java Swing application allows users to manage Person records. Users can add new Person records, save them to a file, and load records from a file.
+
+Features
+Add Person:
+Input a person's name and age.'
+Add the person to an internal list.
+Display the number of records in the list.
+
+Save Records:
+Save all person records to a file in a specified format.
+
+Load Records:
+Load person records from a file and display them.
+
+Key Components
+Person Class
+Attributes:
+name: The person's name.
+age: The person's age.
+
+Methods:
+getName(), setName(), getAge(), setAge(): Getters and setters for attributes.
+toString(): Returns a string representation of the person in the format "name
+".
+
+GUI Actions
+Add Person (btnaddActionPerformed):
+Reads the name and age from text fields.
+Creates a new Person object and adds it to the persons list.
+Clears the text fields and updates the display with the count of records.
+Save Records (btnsaveActionPerformed):
+
+Converts each Person object to a string.
+Writes the records to a file.
+Handles potential IOException during file operations.
+Load Records (btnloadActionPerformed):
+
+Clears the existing list of Person objects.
+Reads records from a file and reconstructs Person objects.
+Displays the loaded records.
+Handles potential FileNotFoundException and IOException during file operations.
+Files
+File Path:
+
+Default path is set to C:\\Users\\Hp\\Desktop.
+File Name:
+
+The file where records are saved or loaded from is named sano.dat.
