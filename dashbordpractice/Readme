@@ -1,0 +1,89 @@
+Educational Management System GUI
+This repository contains a Java Swing application for managing educational entities, including lecturers, courses, and students.
+The application now includes functionality for student authentication and registration.
+
+Overview
+The application allows users to manage lecturers, courses, and students through a graphical user interface (GUI). 
+The student management functionality includes authentication and registration features, making the system more robust and interactive.
+
+Features
+Lecturer Management:
+Add, edit, and delete lecturer records.
+View a list of lecturers in a table.
+
+Course Management:
+Add, edit, and delete course records.
+View a list of courses in a table.
+
+Student Management:
+Add, edit, and delete student records.
+Authenticate student logins.
+Register new students.
+
+Key Components
+Student Authentication and Registration
+Login:
+Students can log in using their ID and password.
+On successful authentication, students are redirected to their dashboard.
+Invalid credentials prompt an error message.
+
+Registration:
+New students can register by providing their name, ID, password, and email.
+Successful registration prompts a confirmation message.
+Field validation ensures all fields are filled and passwords match.
+
+Tables
+Lecturer Table (TL):
+Displays lecturer information.
+Columns: Name, ID, Contact.
+
+Course Table (TC):
+Displays course information.
+Columns: Name, ID, Credit.
+
+Student Table (TS):
+Displays student information.
+Columns: ID, Name, Score.
+
+Dialogs
+Login Dialog (login):
+Allows students to log in.
+
+Registration Dialog (registerdialog):
+Allows new students to register.
+
+Student Dashboard (studentdash):
+Displays student information after successful login.
+
+Class Descriptions
+Students Class
+Attributes:
+name: Student's name.
+id: Student's ID.
+password: Student's password.
+email: Student's email.
+status: Authentication status (authenticated or not).
+
+Methods:
+authenticate(Students student): Validates the student's ID and password.'
+getName(), setName(), getId(), setId(), getPassword(), setPassword(), getEmail(), setEmail(), getStatus(), setStatus(): Getters and setters for attributes.
+
+NewJFrame Class
+Attributes:
+student: List of students.
+currentskd: Currently logged-in student.
+login, registerdialog: Dialogs for login and registration.
+
+Methods:
+btnloginActionPerformed(): Handles student login.
+btnrregisterActionPerformed(): Displays the registration dialog.
+btnregisterActionPerformed(): Registers a new student.
+main(): Entry point of the application.
+
+studentdash Class
+Attributes:
+login: Reference to the main login frame.
+
+Methods:
+jButton1ActionPerformed(): Allows students to log out and return to the login screen.
+main(): Entry point for the student dashboard.
