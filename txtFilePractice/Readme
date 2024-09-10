@@ -1,0 +1,48 @@
+Student Record Management System
+Overview
+This Java Swing application allows users to manage student records. 
+Users can add student records, save them to a file, and load records from a file. Each student record includes a name and age.
+
+Features
+Add Student:
+Input a student's name and age.'
+Add the student to an internal list and display the number of records.
+
+Save Records:
+Save all student records to a file.
+
+Load Records:
+Load student records from a file and display them.
+
+Components
+Students Class
+Attributes:
+name: The student's name.
+age: The student's age.
+
+Methods:
+getName(), setName(), getAge(), setAge(): Getters and setters for attributes.
+toString(): Returns a string representation of the student in the format "name
+".
+
+GUI Actions
+Add Student (btnaddActionPerformed):
+Reads the name and age from text fields.
+Creates a new Students object and adds it to the student list.
+Clears the text fields and updates the display with the count of records.
+
+Save Records (btnsaveActionPerformed):
+Converts each Students object to a string and saves them to a file.
+Handles potential IOException during file operations.
+
+Load Records (btnloadActionPerformed):
+Clears the existing list of Students objects.
+Reads records from a file and reconstructs Students objects.
+Displays the loaded records.
+Handles potential FileNotFoundException and IOException during file operations.
+
+Files
+File Path:
+Default path is set to C:\\Users\\Hp\\Desktop.
+File Name:
+The file where records are saved or loaded from is named student.dat.
