@@ -1,0 +1,131 @@
+Educational Management System GUI
+This repository contains a Java Swing application for managing educational entities, including lecturers, courses, and students. 
+The application provides a graphical user interface (GUI) that allows users to perform CRUD (Create, Read, Update, Delete) operations on these entities.
+
+Overview
+The NewJFrame class is the main frame of the application, featuring tables and dialogs to manage lecturers, courses, and students.
+The application supports adding, editing, and deleting records for each entity type.
+
+Features
+Lecturer Management:
+Add, edit, and delete lecturer records.
+View a list of lecturers in a table format.
+
+Course Management:
+Add, edit, and delete course records.
+View a list of courses in a table format.
+
+Student Management:
+Add and manage students, including their association with courses.
+
+Key Components
+Tables
+Lecturer Table (TL):
+Displays lecturer information.
+Columns: Name, ID, Contact.
+
+Course Table (TC):
+Displays course information.
+Columns: Name, ID, Credit.
+
+Student Table (TS):
+Displays student information.
+Columns: ID, Name.
+
+Add Student Table (TLAS):
+Displays students that can be added to courses.
+Columns: ID, Name.
+Dialogs
+
+Add Lecturer Dialog (DAL):
+For adding or editing lecturer details.
+
+Add Student Dialog (DAS):
+For adding or editing student details.
+
+Add Course Dialog (DAC):
+For adding or editing course details.
+
+Add Student to Course Dialog (DLAS):
+For adding students to a course.
+
+Class Descriptions
+NewJFrame Class
+Attributes:
+DTM: Default table model for lecturers.
+CDTM: Default table model for courses.
+SDTM: Default table model for students.
+SADTM: Default table model for add-student operations.
+pattern, matcher: For validating input patterns.
+validate, vald: Flags for validation status.
+aidpattern, apasswordpattern, lidpattern, lpasswordpattern: Regex patterns for validation.
+Lname, Lid, Lcontact, Sid, Sc: User input values.
+
+Methods:
+initComponents(): Initializes GUI components and table models.
+btnDALSActionPerformed(): Handles actions for adding/editing lecturers.
+btnDLASSActionPerformed(): Handles actions for adding/editing students and courses.
+btnALActionPerformed(): Handles actions for logging in.
+btnaddLActionPerformed(), btnaddSActionPerformed(), btnaddCActionPerformed(): Handles actions for opening dialogs.
+mm_editLActionPerformed(), mm_deleteLActionPerformed(): Handles actions for editing and deleting lecturers.
+btnDACSActionPerformed(): Handles actions for adding/editing courses.
+mm_editCActionPerformed(), mm_deleteCActionPerformed(): Handles actions for editing and deleting courses.
+DTM: Default table model for lecturers.
+CDTM: Default table model for courses.
+SDTM: Default table model for students.
+SADTM: Default table model for add-student operations.
+pattern, matcher: For validating input patterns.
+validate, vald: Flags for validation status.
+aidpattern, apasswordpattern, lidpattern, lpasswordpattern: Regex patterns for validation.
+Lname, Lid, Lcontact, Sid, Sc: User input values.
+
+Methods:
+btnDASSActionPerformed(): Handles adding/editing student details.
+cbasActionPerformed(): Updates student selection and populates fields.
+cbacActionPerformed(): Updates course selection and populates fields.
+addstudentActionPerformed(): Adds students to lecturers or courses.
+mm_editSActionPerformed(): Handles editing student details.
+mm_deleteSActionPerformed(): Handles deleting student records.
+validid(): Validates the ID using regex patterns.
+validpassword(): Validates passwords using regex patterns.
+validlid(): Validates lecturer IDs using regex patterns.
+validlpassword(): Validates lecturer passwords using regex patterns.
+main(): Entry point of the application.
+
+Overview
+Students Class: Represents a student with attributes for name, ID, and a custom field sc.
+Lecturers Class: Represents a lecturer with attributes for name, ID, and a custom field Lc. Manages lists of associated students and courses.
+Courses Class: Represents a course with attributes for name, ID, and a custom field cc.
+Class Descriptions
+Students Class
+The Students class encapsulates information about a student.
+
+Attributes
+sname (String): The name of the student.
+sid (int): The unique identifier for the student.
+sc (int): A custom field (e.g., score or credit).
+Methods
+Getters and setters for sname, sid, and sc.
+toString(): Returns a string representation of the student object.
+Lecturers Class
+The Lecturers class represents a lecturer and manages associated students and courses.
+
+Attributes
+Lname (String): The name of the lecturer.
+LID (int): The unique identifier for the lecturer.
+Lc (int): A custom field (e.g., load or credit).
+Student (ArrayList<Students>): A list of students associated with the lecturer.
+Course (ArrayList<Courses>): A list of courses associated with the lecturer.
+Methods
+Getters and setters for Lname, LID, Lc, Student, and Course.
+toString(): Returns a string representation of the lecturer object.
+Courses Class
+The Courses class represents a course.
+
+Attributes
+cname (String): The name of the course.
+cid (int): The unique identifier for the course.
+cc (int): A custom field (e.g., credit count or complexity).
+Methods
+Getters and setters for cname, cid, and cc.
+toString(): Returns a string representation of the course object.
