@@ -1,0 +1,71 @@
+Academic Program and Student Management System
+This Java Swing application provides a user interface for managing academic programs and students. 
+It allows users to add, edit, and delete programs and students, and view them in tables.
+
+Features
+Program Management:
+Add new programs.
+Edit existing programs.
+Delete programs.
+View a list of programs in a table.
+
+Student Management:
+Add students to a selected program.
+Edit existing students.
+Delete students from a program.
+View students associated with a selected program in a table.
+
+Components
+Student Class: Represents a student with attributes for ID and name.
+Program Class: Represents an academic program with attributes for name, duration, and credit hours. It also maintains a list of students.
+User Interface
+Program Table: Displays the list of programs with columns for Program Name, Duration, and Credit Hours.
+Student Table: Displays students associated with the selected program, with columns for Student ID and Student Name.
+Dialogs:
+Program Dialog: For adding or editing programs.
+Student Dialog: For adding or editing students within a program.
+How to Use
+Run the Application: Execute the NewJFrame class to launch the GUI.
+
+Managing Programs:
+Add Program: Click the "Add Program" menu item. Enter the program details in the dialog and click "Save".
+Edit Program: Right-click a program in the table and select "Edit". Modify the details in the dialog and click "Save".
+Delete Program: Right-click a program in the table and select "Delete".
+
+Managing Students:
+Add Student: Select a program from the dropdown, then click "Add Student". Enter student details in the dialog and click "Save".
+Edit Student: Right-click a student in the table and select "Edit". Modify the details in the dialog and click "Save".
+Delete Student: Right-click a student in the table and select "Delete".
+Update ComboBox: The combo box for programs is automatically updated when programs are added, edited, or deleted.
+Overview
+Student Class: Represents a student with attributes for their ID and name.
+Program Class: Represents an academic program that can have multiple students. Includes attributes for the program's name, duration, and credit hours.
+
+Class Descriptions
+Student Class
+The Student class encapsulates information about a student.
+
+Attributes
+Student_ID (String): The unique identifier for the student.
+Student_name (String): The name of the student.
+Methods
+Getters and setters for Student_ID and Student_name.
+toString(): Returns a string representation of the student object.
+
+Program Class
+The Program class represents an academic program and manages a list of students.
+
+Attributes
+proname (String): The name of the program.
+produration (int): The duration of the program in months.
+procredithours (int): The total credit hours required for the program.
+Student (ArrayList<Student>): A list of students enrolled in the program.
+Methods
+Getters and setters for proname, produration, procredithours, and Student.
+toString(): Returns a string representation of the program object.
+
+Code Overview
+NewJFrame Class
+Initialization: Sets up table models for programs and students and initializes the user interface components.
+Action Handlers: Handles user interactions for adding, editing, and deleting programs and students.
+Update Methods: Refreshes the program combo box and updates the student table based on the selected program.
